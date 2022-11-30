@@ -1,0 +1,5 @@
+GitHub Name|Tasks
+MatiasX|adatbekérés
+Kotkodaa|txt írás
+berkovics|kiolvasás
+MrBrown16|vezérlő

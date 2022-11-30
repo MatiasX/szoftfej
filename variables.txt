@@ -1,0 +1,7 @@
+Bekérő lista = inputList = []
+txt neve = konyvsorozat.txt
+lista elválasztó = ":"
+bekérő függvény = inputData():
+bekérő függvény argument = (inputList)
+file író függvény = writeFile
+kiolvasó függvény = olvas()

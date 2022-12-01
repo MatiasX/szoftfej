@@ -1,12 +1,11 @@
-#inputList = ["cym","adat", "2000", "balazs", "magyar"]
 def writeFile(List):
-    header = "title:writer:age:category:language"
-    file = open("bookseries.txt", "a", encoding='utf-8')
-    file.write(header)
-    file.write("\n")
+    
     for i in range(0, len(List)):
+        file = open("bookseries.txt", "a", encoding='utf-8')
         file.write(List[i])
-        file.write(":")
+        if i < len(List)-1:
+            file.write(":")
+    file.write("\n")
     file.close()
-writeFile(inputList)
+    
 

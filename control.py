@@ -1,6 +1,7 @@
 import fajlolvasas 
 import inputdata 
 import konyv
+import search
 import os.path
 from pathlib import Path
 
@@ -26,13 +27,17 @@ def control():
 
 	file.close()
 	while input0 != 0: 
-		print("kilépéshez [0] kiolvasáshoz [1] bevitelhez [2]") #menü
+		print("kilépéshez [0] kiolvasáshoz [1] bevitelhez [2] kereséshez [3]") #menü
 		input0 = int(input("válassz:"))
 		if input0 == 1:
 			outputList.append(fajlolvasas.kiolvas()) #kiolvassa a sorokat, listába, listaelemeket szétválasztja, és kiírja a terminálba
 		elif input0 == 2:
 			inputList = inputdata.inputData() #bekér öt adatot az inputList-be
-			konyv.writeFile(inputList) #kiírja az inputListet egy sorba a file-ba ":"-val elválasztva
+			konyv.writeFile(inputList,bookseries) #kiírja az inputListet egy sorba a file-ba ":"-val elválasztva
+		# ~ elif input0 == 3:
+			# ~ print(title: [1] writer: [2] age: [3] category: [4] language: [5])
+			# ~ category = int(input("Válasz: "))
+			# ~ search.search(category)
 		else:
 			break
 	

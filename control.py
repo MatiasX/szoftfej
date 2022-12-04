@@ -5,6 +5,7 @@ import os.path
 from pathlib import Path
 
 def control():
+	fileName = "bookseries"
 	path = Path.cwd()  # megmondja az aktuális elérési útvonalát a fájlnak (az utolsó mappáig, a fájl neve nincs benne)
 	path = str(path) + "\\bookseries.txt" #txt hozzáadása az elérési útvonalhoz 
 	inputList = []
@@ -26,13 +27,13 @@ def control():
 
 	file.close()
 	while input0 != 0: 
-		print("kilépéshez [0] kiolvasáshoz [1] bevitelhez [2] kereséshez [3]") #menü
+		print("kilépéshez [0] kiolvasáshoz [1] bevitelhez [2]") #menü
 		input0 = int(input("válassz:"))
 		if input0 == 1:
 			outputList.append(fajlolvasas.kiolvas()) #kiolvassa a sorokat, listába, listaelemeket szétválasztja, és kiírja a terminálba
 		elif input0 == 2:
 			inputList = inputdata.inputData() #bekér öt adatot az inputList-be
-			konyv.writeFile(inputList,bookseries) #kiírja az inputListet egy sorba a file-ba ":"-val elválasztva
+			konyv.writeFile(inputList,fileName) #kiírja az inputListet egy sorba a file-ba ":"-val elválasztva
 		else:
 			break
 	

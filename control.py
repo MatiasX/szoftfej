@@ -12,7 +12,7 @@ def control():
 	outputList = []
 	input0 = None
 	#print(input0)
-	header = "title:writer:age:category:language\n"
+	header = "title:writer:release year:category:language\n"
 	if os.path.isfile(path):  #ellenőrzi, hogy létezik e az adott file a megadott helyen
 		file = open("bookseries.txt", "r", encoding="utf8")
 		lenght = len(file.readlines()) 
@@ -34,10 +34,6 @@ def control():
 		elif input0 == 2:
 			inputList = inputdata.inputData() #bekér öt adatot az inputList-be
 			konyv.writeFile(inputList,bookseries) #kiírja az inputListet egy sorba a file-ba ":"-val elválasztva
-		# ~ elif input0 == 3:
-			# ~ print(title: [1] writer: [2] age: [3] category: [4] language: [5])
-			# ~ category = int(input("Válasz: "))
-			# ~ search.search(category)
 		else:
 			break
 	

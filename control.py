@@ -1,7 +1,6 @@
 import fajlolvasas 
 import inputdata 
 import konyv
-import search
 import os.path
 from pathlib import Path
 

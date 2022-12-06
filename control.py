@@ -27,7 +27,7 @@ def control():
 
 	file.close()
 	while input0 != 0: 
-		print("kilépéshez [0] kiolvasáshoz [1] bevitelhez [2]") #menü
+		print("kilépéshez [0] fájl kiolvasásához [1] könyv beviteléhez [2]") #menü
 		input0 = int(input("válassz:"))
 		if input0 == 1:
 			outputList.append(fajlolvasas.kiolvas()) #kiolvassa a sorokat, listába, listaelemeket szétválasztja, és kiírja a terminálba

@@ -1,11 +1,11 @@
+from book import Book
 
-
-class KonyvInput(nextline):
-
+class KonyvInput():
+ 
     
-    def Konyvinput(nextline):
-        book=a + "nextline" 
-        book=Book()   
+    def konyvInput(book):
+        # ~ book= "a" + str(nextline)
+        # ~ book=Book()
         
         print("Adja meg a könyv adatait!\n")
         name=input("Könyv címe: ")
@@ -18,4 +18,5 @@ class KonyvInput(nextline):
         book.category=name
         name=input("Nyelve: ")
         book.language=name
+
 

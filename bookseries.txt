@@ -1,17 +1,2 @@
-<<<<<<< HEAD
-0::::
-title:writer:age:category:language
-sejtek:Kosza József:2015:Kaland:Ukrán
-katyvasz:Kosza József:2002:Sci-fi:Francia
-katyvasz:Hisztis Mirtil:2015:Vígjáték:Magyar
-aranykutya:Balázs Máté:2002:Kaland:Olasz
-tavasz:Kukac Péter:2012:Erotika:Olasz
-katyvasz:Kosza József:2003:Erotika:Német
-orrfújás:Hisztis Mirtil:2007:Kaland:Olasz
-katyvasz:Kosza József:2007:Sci-fi:Cseh
-orrfújás:Kosza József:2008:Akció:Cseh
-orrfújás:Kosza József:2022:Erotika:Ukrán
-=======
 title:writer:release year:category:language
 1:2:3:4:5
->>>>>>> 024eb5fbd862a653ab13af011cf8bf57acc01dbd

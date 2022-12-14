@@ -1,6 +1,8 @@
-import fajlolvasas 
-import inputdata 
-import konyv
+from readfile import ReadFile
+from write_file import WriteFile
+from konyvInput import KonyvInput
+from book import Book
+
 import os.path
 from pathlib import Path
 
@@ -8,10 +10,11 @@ def control():
 	path = Path.cwd()  # megmondja az aktuális elérési útvonalát a fájlnak (az utolsó mappáig, a fájl neve nincs benne)
 	path = str(path) + "\\bookseries.txt" #txt hozzáadása az elérési útvonalhoz 
 	input0 = None
-	header = "title:writer:release year:category:language\n"
+	header = "title:writer:release year:category:language"
 	if os.path.isfile(path):  #ellenőrzi, hogy létezik e az adott file a megadott helyen
 		file = open("bookseries.txt", "r", encoding="utf8")
 		lenght = len(file.readlines()) 
+		nextLine = lenght + 1
 		file.close()
 	else:
 		lenght = 1  #nincs ilyen file de hogy megnyissa a következő if, megadom hogy a hossza egy, így írásra nyílik meg a file
@@ -22,16 +25,17 @@ def control():
 		file.write(header) 
 
 	file.close()
-							while input0 != 0: 
-								print("kilépéshez [0] fájl kiolvasásához [1] könyv beviteléhez [2]") #menü
-								input0 = int(input("válassz:"))
-								if input0 == 1:
-									outputList.append(fajlolvasas.kiolvas()) #kiolvassa a sorokat, listába, listaelemeket szétválasztja, és kiírja a terminálba
-								elif input0 == 2:
-									inputList = inputdata.inputData() #bekér öt adatot az inputList-be
-									konyv.writeFile(inputList,fileName) #kiírja az inputListet egy sorba a file-ba ":"-val elválasztva
-								else:
-									break
+	while input0 != 0: 
+		print("kilépéshez [0] fájl kiolvasásához [1] könyv beviteléhez [2]") #menü
+		input0 = int(input("válassz:"))
+		if input0 == 1:
+			ReadFile.readFile() #kiolvassa a sorokat, listába, listaelemeket szétválasztja, és kiírja a terminálba
+		elif input0 == 2:
+			book = Book()
+			KonyvInput.konyvInput(book) #bekér öt adatot a Book classba
+			WriteFile.writeFile(book) #kiírja a könyvet egy sorba a file-ba ":"-val elválasztva
+		else:
+			break
 	
 control()
 # ~ import fajlolvasas 

@@ -1,8 +1,11 @@
-class WriteFile(nextLine):
-    book = "a" + nextline
-    book = Book()
+from book import Book
+class WriteFile():
+
     def writeFile(book):
-        file = open("bookseries.txt", "a" encoding="utf-8")
+        # ~ book = "a" + str(nextLine)
+        # ~ book = Book()
+        file = open("bookseries.txt", "a", encoding="utf-8")
+        file.write("\n")
         file.write(book.title)
         file.write(":")
         file.write(book.writer)
@@ -12,6 +15,9 @@ class WriteFile(nextLine):
         file.write(book.category)
         file.write(":")
         file.write(book.language)
+        
         file.close()
+        
+
 
 

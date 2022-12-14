@@ -6,7 +6,7 @@ class ReadFile:
 		header=file.readline() #fejléc beolvasása
 		
 		allLines = file.readlines() #sorok beolvasása
-		for a in range(len(allLines)-1):  #sorlista elemein végigmegy
+		for a in range(len(allLines)):  #sorlista elemein végigmegy
 			for i in range(0,5):  # sor szétválasztott elemein végigmegy
 				oneLine = allLines[a]  #egy sor megfogása
 				oneLineSplit=oneLine.split(":") #sor szétválasztása ":" mentén
@@ -22,4 +22,3 @@ class ReadFile:
 		file.close()
 
 
-	readFile()

@@ -1,2 +1,6 @@
 title:writer:release year:category:language
-1:2:3:4:5
+A Szilmarillok:J.R.R. Tolkien:1978:Fantasy:Magyar
+Az Ember és Szimbólumai:C.J. Jung:1964:Pszichológia:Magyar
+Szürke Ötven Árnyalata:E.L. James:2011:Erotika:Magyar
+Alkonyat:Stephenie Meyer:2005:Romantika:Magyar
+Gyengeségeim:Henry Kettner:2022:Életrajz:Magyar
